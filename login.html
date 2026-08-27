@@ -1,11 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio de sesión</title>
+
+    <link rel="stylesheet" href="css/styles2.css">
 </head>
+
 <body>
-    
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="logo">
+            UCA Foro
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="carreras.html">Carreras</a>
+            <a href="publicar.html">Publicar</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html" class="boton-registro">Registrarse</a>
+        </nav>
+
+    </header>
+
+    <h1>Iniciar sesión</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos de contacto</legend>
+
+            <p>
+                <label for="Usurio/Correo">Usuario/Correo</label><br>
+                <input type="email" id="Uu=Usuario/Correo" name="Usuario/Correo" required>
+            </p>
+
+            <p>
+                <label for="correo">Contraseña</label><br>
+                <input type="text" id="Contraseña" name="Contraseña" required>
+            </p>
+            <a href="" type="submit">Olvidaste tu contraseña?</a>
+        </fieldset>
+
+        <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Registrarse</button>
+
+    </form>
 </body>
+
 </html>
