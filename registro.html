@@ -1,11 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registrate a UCA FORO!</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="logo">
+            UCA Foro
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="carreras.html">Carreras</a>
+            <a href="publicar.html">Publicar</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html" class="boton-registro">Registrarse</a>
+        </nav>
+
+    </header>
+
+    <h1>¡Comenzá a conocer a nuevas personas!</h1>
+
+    <!--REGISTRO-->
+
+    <fieldset>
+    <form action="login", method="post">
+
+        <div class="USUARIO-REG">
+            <label for="new-user">Create un Usuario:</label>
+            <input type="email" id="new-user" name="nuevo-usuario" placeholder="Usuario o correo UCA" required>
+        </div>
+
+        <div class="CONTRASEÑA-REG">
+            <label for="new-password">Contraseña:</label>
+            <input type="password" id="new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres" required>
+        </div>
+
+        <div class="SELCARR">
+            <label for="SelCarr">Seleccionar carrera:</label>
+            <select name="carr" id="SelCarr">
+                <option value="" disabled selected>Seleccionar...</option>
+                <option value="">Ing. Agronómica</option>
+                <option value="">Ing. Ambiental</option>
+                <option value="">Ing. en Alimentos</option>
+                <option value="">Ing. Civil</option>
+                <option value="">Ing. Industrial</option>
+                <option value="">Ing. en Informática</option>
+                <option value="">Ing. en Inteligencia Artesanal </option>
+                <option value="">Ing. Química</option>
+                <option value="">Lic. en Biotecnología</option>
+                <option value="">Lic. en Cs. de Datos</option>
+                <option value="">Arquitectura</option>
+                <option value="">Bioingeniería</option>
+            </select>
+        </div>
+
+        <div class="OPCIONES-REG">
+            <p class="red-registro">¿Ya tenés una cuenta? <a href="login.html">Iniciá Sesión</a></p>
+            <input class="Reg" type="submit" name="iniciar sesión" value="Registrate!">
+        </div>
+
+
+    </form>
+    </fieldset>
+
+    <!--PIE DE PÁGINA-->
+    <footer>
+
+        <p>UCA Foro - Comunidad de estudiantes UCA</p>
+
+    </footer>
+
 </body>
+
 </html>
