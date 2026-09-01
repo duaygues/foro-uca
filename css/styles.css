@@ -200,3 +200,63 @@ footer {
 
     color: #777777;
 }
+
+/* INICIO DE ESTILOS DEL LOGIN */ 
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    width: 40%;
+    margin: auto;
+    border-radius: 12px;
+    padding-bottom: 3%;
+}
+
+.USUARIO {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    padding-top: 5%;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+}
+
+.CONTRASEÑA {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+.OPCIONES {
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.IniSes {
+    color: white;
+    background-color: #003b71;
+    width: 150px;
+    height: 45px;
+    font-size: medium;
+    border-radius: 20px;
+    border-color: darkblue;
+}
+
+.red-registro {
+    padding-bottom: 15px;
+}
+
+/* FIN DE ESTILOS DEL LOGIN */
