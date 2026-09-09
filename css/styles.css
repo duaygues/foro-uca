@@ -255,6 +255,11 @@ input {
     border-color: darkblue;
 }
 
+.IniSes:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
 .red-registro {
     padding-bottom: 15px;
 }
@@ -307,6 +312,11 @@ input {
     font-size: medium;
     border-radius: 20px;
     border-color: darkblue;
+}
+
+.Reg:hover {
+    background-color: darkblue;
+    cursor: pointer;
 }
 
 /* FIN DE ESTILOS DEL REGISTRO */ 
