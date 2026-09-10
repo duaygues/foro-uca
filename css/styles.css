@@ -212,6 +212,7 @@ fieldset {
     margin: auto;
     border-radius: 12px;
     padding-bottom: 3%;
+    background-color: silver;
 }
 
 .USUARIO {
@@ -388,3 +389,80 @@ input {
 
 /* FIN DE ESTILOS DEL PERFIL */ 
 
+/* INICIO DE ESTILOS DE PUBLICAR */
+
+.aviso {
+    text-align: center;
+}
+
+.Post-body {
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: silver;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.SELECT-FORUM {
+    display: flex;
+    justify-content: center;
+    background-color: #003b71;
+    border-radius: 14px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    width: 45%;
+}
+
+.select-foro {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.input-titulo {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    width: 45%;
+    font-size: large;
+}
+
+.texto-descriptivo {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 14px;
+    width: 80%;
+}
+
+.subir-archivo {
+    margin: 10px;
+}
+
+.boton-adjarch {
+    color: white;
+}
+
+.guardar-y-publicar {
+    margin: 10px;
+}
+
+.boton-publicar {
+    background-color: #003b71;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}
+
+.boton-guardar {
+    background-color: #003b71;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* FIN DE ESTILOS DE PUBLICAR */
