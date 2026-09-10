@@ -321,3 +321,70 @@ input {
 
 /* FIN DE ESTILOS DEL REGISTRO */ 
 
+/* INICIO DE ESTILOS DEL PERFIL */ 
+
+.frame {
+    width:auto;
+    color: #1c19e1
+}
+
+
+.centrado {
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    margin: 10px;
+}
+
+
+
+.fin_der {
+    text-align:right;
+}
+
+.foto_perfil {
+    width:200px;
+    height:200px;
+    left:0px;
+    margin:10px;
+}
+
+.pub_log{
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    width:auto;
+    height:400px ;
+    margin:40px;
+}
+
+.perfil{
+    display:flex;
+    flex-direction:row;
+}
+
+.felx{
+    display:flex;
+}
+
+.descuser{
+    margin-top:10px;
+    width: 400px;
+    height: 160px;
+}
+
+.nombreuser{
+    font-size: 20px;
+    margin-top: 10px;
+    width:50%;
+}
+
+.fotoperfil_2{
+    width:100px;
+    height:auto;
+
+}
+
+/* FIN DE ESTILOS DEL PERFIL */ 
+
