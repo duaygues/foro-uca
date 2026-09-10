@@ -201,6 +201,23 @@ footer {
     color: #777777;
 }
 
+
+@media (max-width:460px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav a{
+        font-size: small;
+    }
+
+}
+
 /* INICIO DE ESTILOS DEL LOGIN */ 
 
 h1 {
@@ -265,6 +282,21 @@ input {
     padding-bottom: 15px;
 }
 
+@media (max-width:460px){
+    fieldset {
+        width: 80%;
+    }
+
+    .USUARIO {
+        width: 80%;
+    }
+
+    .CONTRASEÑA {
+        width: 80%;
+    }
+}
+
+
 /* FIN DE ESTILOS DEL LOGIN */
 
 /* INICIO DE ESTILOS DEL REGISTRO */ 
@@ -319,6 +351,19 @@ input {
     background-color: darkblue;
     cursor: pointer;
 }
+
+@media (max-width:460px){
+    .USUARIO-REG {
+        width: 80%;
+    }
+    .CONTRASEÑA-REG {
+        width: 80%;
+    }
+    .SELCARR {
+        width: 80%;
+    }
+}
+
 
 /* FIN DE ESTILOS DEL REGISTRO */ 
 
@@ -464,5 +509,22 @@ input {
     height: 30px;
     cursor: pointer;
 }
+
+@media (max-width:460px){
+    .Post-body {
+        width: 90%;
+    }
+    .SELECT-FORUM {
+        width: 45%;
+    }
+    .select-foro {
+        font-size: xx-small;
+        
+    }
+    .input-titulo {
+        font-size: small;
+    }
+}
+
 
 /* FIN DE ESTILOS DE PUBLICAR */
