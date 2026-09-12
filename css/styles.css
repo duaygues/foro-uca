@@ -311,6 +311,16 @@ input {
     padding-top: 5%;
 }
 
+.CORREO-REG {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    padding-top: 20px;
+}
+
 .USUARIO-REG {
     display: flex;
     flex-direction: column;
@@ -353,6 +363,9 @@ input {
 }
 
 @media (max-width:460px){
+    .CORREO-REG {
+        width: 80%;
+    }
     .USUARIO-REG {
         width: 80%;
     }
