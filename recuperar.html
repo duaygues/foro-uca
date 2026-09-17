@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="logo">
+            UCA Foro
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="carreras.html">Carreras</a>
+            <a href="publicar.html">Publicar</a>
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html" class="boton-registro">Registrarse</a>
+        </nav>
+
+    </header>
+
+    <h1>Recuperar contraseña</h1>
+
+    <!--LOGIN-->
+
+    <fieldset>
+    <form action="login", method="post">
+
+        <p class="ingr-email">Ingresá tu email o correo de la institución para que podamos enviarte un enlace para restablecer tu contraseña. </p>
+        <div class="RESTPASSW">
+            <label for="rest_password">Email:</label>
+            <input type="email" id="rest_password" name="nueva-contra" placeholder="Email o correo UCA" required>
+        </div>
+
+        <div class="OPCIONES">
+            <input class="IniSes" type="submit" name="iniciar sesión" value="Enviar Enlace">
+        </div>
+
+    </form>
+    </fieldset>
+
+    <!--PIE DE PÁGINA-->
+    <footer>
+
+        <p>UCA Foro - Comunidad de estudiantes UCA</p>
+
+    </footer>
+
+</body>
+</html>
