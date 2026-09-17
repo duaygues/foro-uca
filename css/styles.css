@@ -287,7 +287,7 @@ input {
     padding-bottom: 15px;
 }
 
-@media (max-width:460px){
+@media (max-width:740px){
     fieldset {
         width: 80%;
     }
@@ -367,7 +367,7 @@ input {
     cursor: pointer;
 }
 
-@media (max-width:460px){
+@media (max-width:1000px){
     .CORREO-REG {
         width: 80%;
     }
@@ -561,7 +561,7 @@ input {
     cursor: pointer;
 }
 
-@media (max-width:460px){
+@media (max-width:1200px){
     .Post-body {
         width: 90%;
     }
@@ -569,7 +569,7 @@ input {
         width: 45%;
     }
     .select-foro {
-        font-size: xx-small;
+        font-size: medium;
         
     }
     .input-titulo {
@@ -577,6 +577,11 @@ input {
     }
 }
 
+@media (max-width:600px){
+    .select-foro {
+        font-size: x-small;
+    }
+}
 
 /* FIN DE ESTILOS DE PUBLICAR */
 
@@ -644,3 +649,28 @@ input {
 
 
 /* FIN DE ESTILOS DE VER PUBLICACIONES*/
+
+/* INICIO DE ESTILOS DEL RECUPERAR */
+
+.ingr-email {
+    text-align: center;
+}
+
+.RESTPASSW {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    padding-top: 2%;
+}
+
+
+@media (max-width:1000px){
+    .RESTPASSW {
+        width: 80%;
+    }
+}
+
+/* FIN DE ESTILOS DEL RECUPERAR */
