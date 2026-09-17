@@ -579,3 +579,68 @@ input {
 
 
 /* FIN DE ESTILOS DE PUBLICAR */
+
+/* INICIO DE ESTILOS DE VER PUBLICACIONES*/
+
+.CONTAINER {
+    display: flex;
+    width: 100%;
+    border: 1px solid #cccccc;
+    min-height: 70vh;
+}
+
+
+.VER-PUBLIC {
+    background-color: white;
+    width: 70%;
+}
+
+
+.COMENTARIOS {
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+}
+
+
+.titulos {
+    font-size: large;
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.REACCIONES button {
+    font-size: large;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.CUERPO {
+    height: 50vh;
+    border-bottom: 1px solid #dddddd;
+    overflow: scroll;
+}
+
+.CUERPO2 {
+    height: 50vh;
+    border-bottom: 1px solid #dddddd;
+    overflow: scroll;
+}
+
+.CUERPO2 p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.CUERPO p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* FIN DE ESTILOS DE VER PUBLICACIONES*/
