@@ -585,6 +585,99 @@ input {
 
 /* FIN DE ESTILOS DE PUBLICAR */
 
+
+/* INICIO DE ESTILOS DEL ESTADO DE LAS PUBLICACIONES*/
+
+.VALIDACION-CUADRO{
+    background-color: white;
+    color: black;
+    width: 50%;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.AVISOS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mensajitos {
+    padding: 10px;
+    text-align: center;
+}
+
+.Proceso-valid {
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #003a716b;
+    margin: 0%;
+    padding: 15px 0;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botones-de-regreso {
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+}
+
+.botones-mas {
+    background-color: #003b71;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.ir-a-perfil {
+    background-color: #003b71;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.caja-volver {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1100px){
+    .botones-de-regreso{
+        gap: 20%;
+    }
+}
+
+@media (max-width:600px){
+    .botones-de-regreso {
+        flex-direction: column;
+        align-items: center;
+    }
+    .botones-mas {
+        margin-bottom: 15px;
+    }
+    .Proceso-valid {
+        font-size: large;
+    }
+}
+
+/* FIN DE ESTILOS DEL ESTADO DE LAS PUBLICACIONES*/
+
+
+
 /* INICIO DE ESTILOS DE VER PUBLICACIONES*/
 
 .CONTAINER {
