@@ -232,6 +232,7 @@ h1 {
 fieldset {
     width: 40%;
     margin: auto;
+    margin-top: 2%;
     border-radius: 12px;
     padding-bottom: 3%;
     background-color: silver;
