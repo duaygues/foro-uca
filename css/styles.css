@@ -245,6 +245,7 @@ fieldset {
     margin-right: auto;
     font-size: larger;
     padding-top: 5%;
+    
 }
 
 input {
@@ -287,6 +288,19 @@ input {
     padding-bottom: 15px;
 }
 
+.MENSAJE-ERROR {
+    display: block;
+    color: darkred;
+    font-size: small;
+    display: block;
+    margin-top: 4px;
+}
+
+.invalido {
+    border: 1px solid darkred;
+}
+
+
 @media (max-width:740px){
     fieldset {
         width: 80%;
@@ -300,7 +314,6 @@ input {
         width: 80%;
     }
 }
-
 
 /* FIN DE ESTILOS DEL LOGIN */
 
