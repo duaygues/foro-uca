@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <!-- ENCABEZADO -->
     <header>
 
@@ -25,7 +26,6 @@
     </header>
 
     <!--PUBLICAR-->
-
     <section class="presentacion">
 
         <h1>¡Publicá en el Foro!</h1>
@@ -33,34 +33,44 @@
         <p class="aviso">(recordá que lo que subas será visado por un administrador, con el fin de verificar que no se infrijan las normas)</p>
 
     </section>
-    
+
     <div class="Post-body">
 
-        <div class="SELECT-FORUM">
-            <label for="SelectForum"></label>
-            <select class="select-foro" name="carr" id="SelectForum" required>
-                <option value="" disabled selected>Seleccionar Foro...</option>
-                <option value="">Ing. Agronómica</option>
-                <option value="">Ing. Ambiental</option>
-                <option value="">Ing. en Alimentos</option>
-                <option value="">Ing. Civil</option>
-                <option value="">Ing. Industrial</option>
-                <option value="">Ing. en Informática</option>
-                <option value="">Ing. en Inteligencia Artificial </option>
-                <option value="">Ing. Química</option>
-                <option value="">Lic. en Biotecnología</option>
-                <option value="">Lic. en Cs. de Datos</option>
-                <option value="">Arquitectura</option>
-                <option value="">Bioingeniería</option>
-            </select>
+        <p class="choose">Elegí un foro:</p>
+        <div class="P-SELECCION-ALLADO">
+            <div class="SELECT-FORUM">
+                <label for="SelectForum"></label>
+                <select class="select-foro" name="carr" id="SelectForum" required>
+                    <option value="" disabled selected>Seleccionar Foro...</option>
+                    <option value="Ciclo Común">Ciclo Común</option>
+                    <option value="Ing. Agronómica">Ing. Agronómica</option>
+                    <option value="Ing. Ambiental">Ing. Ambiental</option>
+                    <option value="Ing. en Alimentos">Ing. en Alimentos</option>
+                    <option value="Ing. Civil">Ing. Civil</option>
+                    <option value="Ing. Industrial">Ing. Industrial</option>
+                    <option value="Ing. en Informática">Ing. en Informática</option>
+                    <option value="Ing. en Inteligencia Artificial">Ing. en Inteligencia Artificial </option>
+                    <option value="Ing. Química">Ing. Química</option>
+                    <option value="Lic. en Biotecnología">Lic. en Biotecnología</option>
+                    <option value="Lic. en Cs. de Datos">Lic. en Cs. de Datos</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Bioingeniería">Bioingeniería</option>
+                </select>
+            </div>
+            <p id="seleccion-carre">Todavía no se eligió un foro.</p>
         </div>
 
         <div class="crear-titulo">
-            <input class="input-titulo"  type="text" placeholder="Agregar Título" required>
+            <input id="cuerpoTitulo" class="input-titulo"  
+            type="text" placeholder="Agregar Título" required maxlength="30">
+            <p id="cont-Titulo">0 / 30</p>
         </div>
 
         <div class="descripcion">
-            <textarea class="texto-descriptivo"  placeholder="Texto de la publicación (opcional)" rows="8"></textarea>
+            <textarea id="cuerpoTexto" class="texto-descriptivo"
+              placeholder="Texto de la publicación (opcional)" rows="8"
+               maxlength="400"></textarea>
+            <p id="cont-form" aria-live="polite">0 / 400</p>
         </div>
 
         <div class="subir-archivo">
@@ -72,8 +82,12 @@
 
         <div class="guardar-y-publicar">
             <button class="boton-guardar" type="button">Guardar Borrador</button>
-            <button class="boton-publicar" type="submit">Publicar</button>
+            <button id="BOTONP" class="boton-publicar" type="submit">Publicar</button>
+            <span id="error-publicar" class="MENSAJE-PUBLICAR"></span>
+            <span id="mensaje-borrador"></span>
         </div>
+
+        <p id="mensaje-borrador" class="mensaje-exito"></p>
 
     </div>
 
@@ -83,5 +97,8 @@
         <p>UCA Foro - Comunidad de estudiantes UCA</p>
 
     </footer>
+
+    <script src="Javascript/publicar.js"></script>
+
 </body>
 </html>
