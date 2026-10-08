@@ -6,6 +6,7 @@
     <title>Perfil</title>
     
     <link rel="stylesheet" href="css/styles.css">
+    <script src="perfil.js"></script>
 </head>
 <body>
      <!-- ENCABEZADO -->
@@ -32,20 +33,26 @@
                 <img src="Def_per.png" alt="foto de perfil" class="foto_perfil">
             </div>
             <div class="centrado">
-                <input type="text" placeholder="Nombre del usuario" class="nombreuser">
-                <textarea placeholder="Descripcion del usuario" class="descuser"></textarea>
+                <input type="text" id="nombre_u" value="nombre del usuario" class="nombreuser" disabled>
+                <textarea id= "descripcion_u" class="descuser" disabled ></textarea>
+                <button id="editar_perfil" onclick="editarPerfil()">editar perfil</button>
+                <button id="silenciar_u" onclick="silenciarUsuario()">Silenciar usuario</button>
             </div>
         </section>
 
         <section class="publi_prev">
             <div class="centrado">
-                <h1> Publicaciones previas</h1>
+                <h1> Publicaciones</h1>
             </div>
-            <div class="pub_log">
-                <h2> No se ha subido nada aun</h2>
-            <div>
-        </section>
+            <div class="selector_publicaciones">
 
+                <button onclick="mostrarPublicaciones()"> Publicaciones </button>
+                <button onclick="mostrarMeGusta()"> Me gusta </button>
+
+            </div>
+            <div class="pub_log" id="cont_publi">
+                <h2> No se ha subido nada aun</h2>
+            </div>
         </section>
     </div>
     
