@@ -37,27 +37,30 @@
     <!--REGISTRO-->
 
     <fieldset>
-    <form action="login", method="post">
+    <form id="FORM-REGISTRO" action="index.html", method="GET" novalidate>
 
         <div class="CORREO-REG">
             <label for="new-user">Ingresar correo de alumno:</label>
             <input type="email" id="new-user" name="nuevo-usuario" placeholder="E-mail o correo UCA" required>
+            <small id="ERROR-NEW-USER" class="MENSAJE-ERROR"></small>
         </div>
 
         <div class="USUARIO-REG">
             <label for="name-user">Nombre de usuario:</label>
-            <input type="email" id="name-user" name="nuevo-usuario" placeholder="Nombre de usuario" required>
-
+            <input type="text" id="name-user" name="nuevo-usuario" placeholder="Nombre de usuario" required>
+            <small id="ERROR-NAME-USER" class="MENSAJE-ERROR"></small>
         </div>
 
         <div class="CONTRASEÑA-REG">
             <label for="new-password">Crear contraseña:</label>
             <input type="password" id="new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres" required>
+            <small id="ERROR-NEWPASSW" class="MENSAJE-ERROR"></small>
         </div>
 
         <div class="CONTRASEÑA-REG">
             <label for="final-new-password">Confirmar contraseña:</label>
             <input type="password" id="final-new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres" required>
+            <small id="ERROR-FNEWP" class="MENSAJE-ERROR"></small>
         </div>
 
         <div class="SELCARR">
@@ -81,7 +84,8 @@
 
         <div class="OPCIONES-REG">
             <p class="red-registro">¿Ya tenés una cuenta? <a href="login.html">Iniciá Sesión</a></p>
-            <input class="Reg" type="submit" name="iniciar sesión" value="Registrate!">
+            <input class="Reg" type="submit" name="iniciar sesión" value="¡Registrate!">
+            <small class="MENSAJE-ERROR" id="ERROR-GENERAL"></small>
         </div>
 
 
@@ -94,6 +98,8 @@
         <p>UCA Foro - Comunidad de estudiantes UCA</p>
 
     </footer>
+
+    <script src="registro.js"></script>
 
 </body>
 
