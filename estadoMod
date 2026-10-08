@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Publicación</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="Javascript/estadoMod.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            UCA Foro
+        </div>
+
+         <nav>
+            <a href="index.html">Inicio</a>
+            <a href="carreras.html">Carreras</a>
+            <a href="publicar.html">Publicar</a>
+            <img src="Def_per.png" alt="foto de perfil" class="fotoperfil_2">
+        </nav>
+
+    </header>
+    <div class="livestatus">
+        <div class= "container">
+        
+            <h1>Estado de la publicacion</h1>
+        </div>
+        <section class= "stats">
+                <div class = "Est_title">
+                <h3>Estado de la publicacion:</h3>
+                </div>
+                <select name="publicaciones previas" id="publicaciones previas">
+                    <option value="publicacion0">selecionar publicación</option>
+                    <option value="publicacion1">Publicación 1</option>
+                    <option value="publicacion2">Publicación 2</option>
+
+                </select>
+
+                <div class = "Estado">
+
+                 <output id ="estado">En revisión</output>
+                </div>
+                <div class = "Est_botton">
+                <button id="denegar" onclick="Denegar_stat()">Denegar</button>
+                <button id="en_espera" onclick="En_espera()">En espera</button>
+                <button id="aprobar" onclick="Aprobar_stat()">aprobar</button>
+                </div>
+                 
+
+        
+
+        </section>
+
+    </div>
+</body>
+
+</html>
