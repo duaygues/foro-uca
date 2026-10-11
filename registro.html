@@ -41,26 +41,30 @@
 
         <div class="CORREO-REG">
             <label for="new-user">Ingresar correo de alumno:</label>
-            <input type="email" id="new-user" name="nuevo-usuario" placeholder="E-mail o correo UCA" required>
+            <input type="email" id="new-user" name="nuevo-usuario" placeholder="Correo UCA. e.g., alumno@uca.edu.ar" maxlength="30" required>
             <small id="ERROR-NEW-USER" class="MENSAJE-ERROR"></small>
+            <small class="RESULTADO-EMAIL" id="RESULT-EMAIL"></small>
         </div>
 
         <div class="USUARIO-REG">
             <label for="name-user">Nombre de usuario:</label>
-            <input type="text" id="name-user" name="nuevo-usuario" placeholder="Nombre de usuario" required>
+            <input type="text" id="name-user" name="nuevo-usuario" placeholder="Nombre de usuario. Máx. 30 caracteres." maxlength="30" required>
             <small id="ERROR-NAME-USER" class="MENSAJE-ERROR"></small>
+            <small class="RESULTADO-USER" id="RESULT-USER"></small>
         </div>
 
         <div class="CONTRASEÑA-REG">
             <label for="new-password">Crear contraseña:</label>
-            <input type="password" id="new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres" required>
+            <input type="password" id="new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres. e.g., laudatoSi#10" maxlength="16" required>
             <small id="ERROR-NEWPASSW" class="MENSAJE-ERROR"></small>
+            <small class="RESULTADO-CONTRA" id="RESULT-CONTRA"></small>
         </div>
 
         <div class="CONTRASEÑA-REG">
             <label for="final-new-password">Confirmar contraseña:</label>
-            <input type="password" id="final-new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres" required>
+            <input type="password" id="final-new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres. e.g., laudatoSi#10" maxlength="16" required>
             <small id="ERROR-FNEWP" class="MENSAJE-ERROR"></small>
+            <small class="RESULTADO-NUEVA-CONTRA" id="RESULT-NEW-CONTRA"></small>
         </div>
 
         <div class="SELCARR">
@@ -99,7 +103,7 @@
 
     </footer>
 
-    <script src="registro.js"></script>
+    <script src="Javascript/registro.js"></script>
 
 </body>
 
