@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,61 +7,153 @@
     <title>Perfil</title>
     
     <link rel="stylesheet" href="css/styles.css">
-    <script src="Javascript/perfil.js"></script>
 </head>
 <body>
      <!-- ENCABEZADO -->
-    <header>
+    <header class="headerPerfil">
 
         <div class="logo">
             UCA Foro
         </div>
 
-        <nav>
+        <nav class="navPerfil">
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
             <a href="publicar.html">Publicar</a>
-            <img src="Def_per.png" alt="foto de perfil" class="fotoperfil_2">
+        </nav>
+
+        <nav class="navFotoPerfil">
+            <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+            <a href="perfil2.html">Nombre del Usuario</a>
         </nav>
 
     </header>
 
-     <!-- perfil de usuario -->
-    
-    <div class="perfil">
-        <section class="felx">
-            <div class=" foto_perfil">
-                <img src="Def_per.png" alt="foto de perfil" class="foto_perfil">
+    <div class="contenedorGeneral">
+        <!--PERFIL DEL USUARIO-->
+        <div class="contenedorPerfil">
+            <div class="perfilYcarrera">
+                <img class="perfilUsuario" src="Def_per.png" alt="Foto de Perfil">
+                <div class="MICARRERA">MI CARRERA</div>
+                <button id="editar_perfil" onclick="editarPerfil()">Editar Perfil</button>
             </div>
-            <div class="centrado">
-                <input type="text" id="nombre_u" value="nombre del usuario" class="nombreuser" disabled>
-                <textarea id= "descripcion_u" class="descuser" disabled ></textarea>
-                <button id="editar_perfil" onclick="editarPerfil()">editar perfil</button>
-                <button id="silenciar_u" onclick="silenciarUsuario()">Silenciar usuario</button>
+            <div class="editables">
+                <div class="grupoCampo">
+                    <p class="nombreYdatos">Nombre de Usuario:</p>
+                    <input type="text" id="nombre_u" placeholder="Máximo 30 caracteres." class="nombreDeUsuario" disabled>
+                </div>
+                
+                <div class="grupoCampo">
+                    <p class="nombreYdatos">Datos personales:</p>
+                    <textarea id="descripcion_u" class="descrUsuario" placeholder="¡Agregá tus datos personales!" disabled></textarea>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section class="publi_prev">
-            <div class="centrado">
-                <h1> Publicaciones</h1>
+        <!--BORRADORES GUARDADOS-->
+        <aside class="borradores">
+            <h2>Borradores: </h2>
+            <div class="borradorGuardado">
+                <div>
+                    <h3>Borrador Guardado 1</h3>
+                </div>
+                <div>
+                    <a href="publicar.html">Editar</a>
+                    <a href="">Eliminar</a>
+                </div>
             </div>
-            <div class="selector_publicaciones">
 
-                <button onclick="mostrarPublicaciones()"> Publicaciones </button>
-                <button onclick="mostrarMeGusta()"> Me gusta </button>
+            <div class="borradorGuardado">
+                <div>
+                    <h3>Borrador Guardado 2</h3>
+                </div>
+                <div>
+                    <a href="publicar.html">Editar</a>
+                    <a href="">Eliminar</a>
+                </div>
+            </div>
 
+            <div class="borradorGuardado">
+                <div>
+                    <h3>Borrador Guardado 3</h3>
+                </div>
+                <div>
+                    <a href="publicar.html">Editar</a>
+                    <a href="">Eliminar</a>
+                </div>
             </div>
-            <div class="pub_log" id="cont_publi">
-                <h2> No se ha subido nada aun</h2>
+
+            <div class="borradorGuardado">
+                <div>
+                    <h3>Borrador Guardado 4</h3>
+                </div>
+                <div>
+                    <a href="publicar.html">Editar</a>
+                    <a href="">Eliminar</a>
+                </div>
             </div>
-        </section>
+        </aside>
+
     </div>
-    
-        <!-- PIE -->
+
+
+
+    <div class="publicadosYfavs">
+        <button onclick="mostrarPublicaciones()" class="pubYfavs">Publicados</button>
+        <button onclick="mostrarMeGusta()" class="pubYfavs">Favoritos</button>
+    </div>
+
+    <section id="cont_publi" class="publicados">
+
+
+        <h2>Publicados</h2>
+
+        <div class="publicacion">
+
+            <div>
+                 <h3>¿Alguien tiene resumen de Probabilidad?</h3>
+                <p>Ingeniería • Hace 20 minutos</p>
+            </div>
+            <div>
+                <a href="publicacion.html">Ver publicación →</a>
+            </div>
+
+        </div>
+
+        <div class="publicacion">
+            <div>
+                <h3>Final fisica</h3>
+                <p>Ingeniería • Hace 1 hora</p>
+            </div>
+            <div>
+                <a href="publicacion.html">Ver publicación →</a>
+            </div>
+
+        </div>
+
+        <div class="publicacion">
+                
+            <div>
+                <h3>Apuntes de Matemática I</h3>
+                <p>Ingeniería • Hace 3 horas</p>
+            </div>
+            <div>
+                <a href="publicacion.html">Ver publicación →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
     <footer>
 
         <p>UCA Foro - Comunidad de estudiantes UCA</p>
 
     </footer>
+
+    <script src="Javascript/perfil2.js"></script>
+
 </body>
 </html>
