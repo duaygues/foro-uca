@@ -12,6 +12,7 @@ botonesReacciones.forEach((button) => {
 });
 
 
+
 // JAVASCRIPT DEL PUBLICAR
 
 const cuerpoTexto = document.querySelector("#cuerpoTexto");
@@ -61,23 +62,6 @@ function validarPublicacion(evento) {
 const botonGuardar = document.querySelector(".boton-guardar");
 const mensajeBorrador = document.querySelector("#mensaje-borrador");
 
-function guardarBorrador(evento) {
-    evento.preventDefault();
-
-    const nuevoPost = {
-        titulo: cuerpoTitulo.value,
-        texto: cuerpoTexto.value,
-        foro: foroSeleccion.value
-    };
-
-    let borradores = JSON.parse(localStorage.getItem("misBorradores")) || [];
-    borradores.push(nuevoPost);
-    localStorage.setItem("misBorradores", JSON.stringify(borradores));
-
-    mensajeBorrador.textContent = "¡Borrador guardado con éxito!";
-}
-
-
 
 function eventosPublicar() {
     cuerpoTexto.addEventListener("input", actualizarContador);
@@ -92,4 +76,3 @@ function eventosPublicar() {
 eventosPublicar();
 
 // FIN DEL JAVASCRIPT DEL PUBLICAR
-
