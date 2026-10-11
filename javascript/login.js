@@ -1,3 +1,4 @@
+
 // JAVASCRIPT DEL LOGIN 
 
 const formLogin = document.querySelector("#FORM-LOGIN");
@@ -7,37 +8,51 @@ const contraseña = document.querySelector("#password");
 const errorContra = document.querySelector("#ERROR-PASSWORD");
 const errorTodo = document.querySelector("#ERROR-GENERAL");
 
+const PATRÓN_EMAIL = /[a-zA-Z0-9]+@(uca)\.(edu)\.(ar)/;
+const RESULT_EMAIL = document.querySelector("#RESULT-EMAIL");
 
-function validarUsuario() {
+const PATRON_CONTRASEÑA = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.,*&#$%/()=+-])[a-zA-Z0-9.,*&#$%/()=+-]+/;
+const RESULT_CONTRA = document.querySelector("#RESULT-CONTRA");
+
+function validarUsuario(evento) {
     const usuarioLimpio = usuario.value.trim();
+    const emailValido = PATRÓN_EMAIL.test(usuarioLimpio);
     let esValido = false;
 
-    if (usuarioLimpio.length > 0) {
+    if (emailValido) {
+        usuario.classList.add("valido");
         usuario.classList.remove("invalido");
         errorUsu.textContent = "";
+        RESULT_EMAIL.textContent = "Formato de email válido."
         esValido = true;
     } else {
         usuario.classList.add("invalido");
-        errorUsu.textContent = "Ingrese un usuario o correo válido.";
+        usuario.classList.remove("valido");
+        errorUsu.textContent = "Ingrese un correo válido.";
+        RESULT_EMAIL.textContent = "";
     }
-
-    return esValido;
+    return(esValido)
 }
 
-function validarContraseña() {
+function validarContraseña(evento) {
 	const contraseñaLimpia = contraseña.value.trim();
-	let esValido = false;
+    const contraValida = PATRON_CONTRASEÑA.test(contraseñaLimpia);
+    const longContra = contraseñaLimpia.length >= 8 && contraseñaLimpia.length <= 16;
+    let esValido = false;
 
-	if (contraseñaLimpia.length >= 8) {
+	if (contraValida && longContra) {
 		contraseña.classList.remove("invalido");
+        contraseña.classList.add("valido");
 		errorContra.textContent = "";
-		esValido = true;
+		RESULT_CONTRA.textContent = "Formato de contraseña válida."
+        esValido = true;
 	} else {
 		contraseña.classList.add("invalido");
-		errorContra.textContent = "Escriba mínimo 8 caracteres.";
+        contraseña.classList.remove("valido");
+		errorContra.textContent = "Escriba entre 8-16 caracteres y use al menos una mayúscula, una minúscula, un número y un caracter especial (&, $, #, %, -).";
+        RESULT_CONTRA.textContent = "";
 	}
-
-	return esValido;
+    return(esValido);
 }
 
 function validarFormulario(evento) {
@@ -46,12 +61,11 @@ function validarFormulario(evento) {
 	const contraseñaValida = validarContraseña();
 
 	if (usuarioValido && contraseñaValida) {
-        errorTodo.classList.add("valido");
-        alert("Inicio de Sesión exitoso");
+        errorTodo.textContent = ""
+        localStorage.setItem("usuarioLogueado", usuario.value);
 
 	} else {
         evento.preventDefault();
-        errorTodo.classList.remove("valido");
         errorTodo.textContent = "Revisar los campos marcados antes de continuar.";
 	}
 }
@@ -60,6 +74,8 @@ function eventosLogin() {
     usuario.addEventListener("input", validarUsuario);
     contraseña.addEventListener("input", validarContraseña);
     formLogin.addEventListener("submit", validarFormulario);
+
 }
 
 eventosLogin();
+
