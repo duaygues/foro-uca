@@ -1,19 +1,39 @@
-// JAVASCRIPT DE LA PUBLICACIÓN (CANT. DE LIKES)
-const botonesReacciones = document.querySelectorAll(".REACCIONES button");
-
-botonesReacciones.forEach((button) => {
-    button.addEventListener("click", () => {
-    const cont=button.querySelector(".cont");
-        if (cont) {
-            let num=parseInt(cont.textContent);
-            cont.textContent=num+1;
-        }
-    });
-});
-
-
 
 // JAVASCRIPT DEL PUBLICAR
+
+// CAMBIO DE HEADER
+
+function actualizarHeaderPublicar() {
+    const nuevoUsuarioLogueado = sessionStorage.getItem("nuevoUsuarioLogueado");
+    const navBar = document.querySelector("header");
+    
+    const ingreso = sessionStorage.getItem("ingreso"); 
+
+    if (navBar && nuevoUsuarioLogueado && ingreso === "true") {
+        navBar.innerHTML = `
+            <div class="logo">
+                UCA Foro
+            </div>
+
+            <nav class="navPerfil">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="publicar.html">Publicar</a>
+            </nav>
+
+            <nav class="navFotoPerfil">
+                <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+                <a href="perfil2.html">${nuevoUsuarioLogueado}</a>
+            </nav>
+        `;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarHeaderPublicar();
+});
+
+// FIN DE CAMBIO DE HEADER
 
 const cuerpoTexto = document.querySelector("#cuerpoTexto");
 const contador = document.querySelector("#cont-form");
