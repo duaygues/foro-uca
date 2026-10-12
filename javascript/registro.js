@@ -1,9 +1,9 @@
 
 //  JAVASCRIPT REGISTRO
 const formReg = document.querySelector("#FORM-REGISTRO");
-const newUser = document.querySelector("#new-user");
+const newUser = document.getElementById("new-user");
 const errorUser = document.querySelector("#ERROR-NEW-USER");
-const nameUser = document.querySelector("#name-user");
+const nameUser = document.getElementById("name-user");
 const errorNameUser = document.querySelector("#ERROR-NAME-USER");
 const newPassw = document.querySelector("#new-password");
 const errorNewPassw = document.querySelector("#ERROR-NEWPASSW");
@@ -11,7 +11,7 @@ const finalNewPassw = document.querySelector("#final-new-password");
 const errorFNewP = document.querySelector("#ERROR-FNEWP");
 const errorTodo = document.querySelector("#ERROR-GENERAL");
 
-const PATRÓN_EMAIL = /[a-zA-Z0-9]+@(uca)\.(edu)\.(ar)/;
+const PATRÓN_EMAIL = /^[a-zA-Z0-9]+@(uca)\.(edu)\.(ar)$/;
 const RESULT_EMAIL = document.querySelector("#RESULT-EMAIL");
 
 const PATRON_CONTRASEÑA = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.,*&#$%/()=+-])[a-zA-Z0-9.,*&#$%/()=+-]+/;
@@ -120,9 +120,13 @@ function validarFormulario(evento) {
 
 	if (correoValido && nuevoUsuarioValido && nuevaContraseñaValida && repNuevaContraseña) {
         errorTodo.textContent = ""
+        sessionStorage.setItem("nuevoUsuarioLogueado", nameUser.value);
+        sessionStorage.setItem("ingreso", "true"); 
+        window.location.href = "index.html"; 
 	} else {
         evento.preventDefault();
         errorTodo.textContent = "Revisar los campos marcados antes de continuar.";
+        sessionStorage.setItem("ingreso", "false"); 
 	}
 }
 
