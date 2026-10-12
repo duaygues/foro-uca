@@ -82,6 +82,27 @@ function validarPublicacion(evento) {
 const botonGuardar = document.querySelector(".boton-guardar");
 const mensajeBorrador = document.querySelector("#mensaje-borrador");
 
+// BORRADOR
+
+function editarPublicacion() {
+
+    const titulo = document.getElementById("cuerpoTitulo");
+    const descripcion = document.getElementById("cuerpoTexto");
+    const boton = document.getElementById("BOTONGUARDAR");
+
+    if (titulo.disabled) {
+        titulo.disabled = false;
+        descripcion.disabled = false;
+
+        boton.textContent = "Guardar borrador";
+
+    } else {
+        titulo.disabled = true;
+        descripcion.disabled = true;
+        boton.textContent = "Editar borrador";
+    }
+}
+
 
 function eventosPublicar() {
     cuerpoTexto.addEventListener("input", actualizarContador);
@@ -90,9 +111,10 @@ function eventosPublicar() {
 
     botonPublicar.addEventListener("click", validarPublicacion);
 
-    botonGuardar.addEventListener("click", guardarBorrador);
+
 }
 
 eventosPublicar();
 
 // FIN DEL JAVASCRIPT DEL PUBLICAR
+
