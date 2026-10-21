@@ -141,3 +141,37 @@ function eventosRegistro() {
 }
 
 eventosRegistro();
+
+function alternarPassword() {
+  var inputPassword = document.getElementById("new-password");
+  var botonOjo = document.getElementById("mostrar/ocultar");
+
+  var muestraContra = document.getElementById("muestraContra");
+
+  if (inputPassword.type === "password") {
+    inputPassword.type = "text";
+    botonOjo.src = "eye-slash.svg";
+    muestraContra.textContent = "Ocultar contraseña";
+  } else {
+    inputPassword.type = "password";
+    botonOjo.src = "eye.svg";
+    muestraContra.textContent = "Mostra contraseña"
+  }
+}
+
+function alternarPassword2() {
+  var inputPassword = document.getElementById("final-new-password");
+  var botonOjo = document.getElementById("mostrar/ocultar2");
+
+  var muestraContra2 = document.getElementById("muestraContra2");
+
+  if (inputPassword.type === "password") {
+    inputPassword.type = "text";
+    botonOjo.src = "eye-slash.svg";
+    muestraContra2.textContent = "Ocultar contraseña";
+  } else {
+    inputPassword.type = "password";
+    botonOjo.src = "eye.svg";
+    muestraContra2.textContent = "Mostrar contraseña";
+  }
+}
