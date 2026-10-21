@@ -18,7 +18,8 @@
             UCA Foro
         </div>
 
-        <nav>
+        <!--HEADER USUARIOS NO REGISTRADOS-->
+        <nav id="header-no-registrados">
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
             <a href="publicar.html">Publicar</a>
@@ -49,6 +50,10 @@
         <div class="CONTRASEÑA">
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="contraseña" placeholder="Mín. 8 carácteres. e.g., laudatoSi#10" maxlength="16" required>
+            <div class="cont-mostrar-contra">
+                <img src="eye.svg" alt="ver contraseña" id="mostrar/ocultar" class="boton-ojo" onclick="alternarPassword()">
+                <span id="mostrarOno" class="mensj-mostrar-contra">Mostrar contraseña</span>
+            </div>
             <small class="MENSAJE-ERROR" id="ERROR-PASSWORD"></small>
             <small class="RESULTADO-CONTRA" id="RESULT-CONTRA"></small>
         </div>
