@@ -103,6 +103,21 @@ function editarPublicacion() {
     }
 }
 
+const botonBorrar = document.getElementById("BOTONBORRAR");
+
+function resetearPubli() {
+    const titulo = document.getElementById("cuerpoTitulo");
+    const descripcion = document.getElementById("cuerpoTexto");
+
+    if (titulo.value.length > 0 || descripcion.value.length > 0) {
+        titulo.value = "";
+        descripcion.value = "";
+        actualizarContador()
+        foroSeleccion.value = "";
+        mostrarForoElegido()
+    }
+}
+
 
 function eventosPublicar() {
     cuerpoTexto.addEventListener("input", actualizarContador);
@@ -111,7 +126,7 @@ function eventosPublicar() {
 
     botonPublicar.addEventListener("click", validarPublicacion);
 
-
+    botonBorrar.addEventListener("click", resetearPubli);
 }
 
 eventosPublicar();
