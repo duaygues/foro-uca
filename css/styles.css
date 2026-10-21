@@ -323,6 +323,21 @@ input {
     color: green;
 }
 
+.boton-ojo {
+    width: 20px;
+    cursor: pointer;
+}
+
+.cont-mostrar-contra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.mensj-mostrar-contra {
+    font-size: small;
+}
 
 @media (max-width:740px){
     fieldset {
