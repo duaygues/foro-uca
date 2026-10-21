@@ -79,3 +79,18 @@ function eventosLogin() {
 
 eventosLogin();
 
+function alternarPassword() {
+  var inputPassword = document.getElementById("password");
+  var botonOjo = document.getElementById("mostrar/ocultar");
+  var textoMuestra = document.getElementById("mostrarOno");
+
+  if (inputPassword.type === "password") {
+    inputPassword.type = "text";
+    botonOjo.src = "eye-slash.svg";
+    textoMuestra.textContent = "Ocultar contraseña"
+  } else {
+    inputPassword.type = "password";
+    botonOjo.src = "eye.svg";
+    textoMuestra.textContent = "Mostrar contraseña"
+  }
+}
