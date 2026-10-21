@@ -18,6 +18,7 @@
             UCA Foro
         </div>
 
+        <!--HEADER USUARIOS NO REGISTRADOS-->
         <nav>
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
@@ -25,6 +26,17 @@
             <a href="login.html">Iniciar sesión</a>
             <a href="registro.html" class="boton-registro">Registrarse</a>
         </nav>
+
+        <!--HEADER USUARIOS SI REGISTRADOS
+        <nav class="navPerfil">
+            <a href="index.html">Inicio</a>
+            <a href="carreras.html">Carreras</a>
+            <a href="publicar.html">Publicar</a>
+        </nav>
+        <nav class="navFotoPerfil">
+            <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+            <a href="perfil2.html">Nombre del Usuario</a>
+        </nav>-->
 
     </header>
 
@@ -56,6 +68,10 @@
         <div class="CONTRASEÑA-REG">
             <label for="new-password">Crear contraseña:</label>
             <input type="password" id="new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres. e.g., laudatoSi#10" maxlength="16" required>
+            <div class="cont-mostrar-contra">
+                <img src="eye.svg" alt="ver contraseña" id="mostrar/ocultar" class="boton-ojo" onclick="alternarPassword()">
+                <span id="muestraContra" class="mensj-mostrar-contra">Mostrar contraseña</span>
+            </div>
             <small id="ERROR-NEWPASSW" class="MENSAJE-ERROR"></small>
             <small class="RESULTADO-CONTRA" id="RESULT-CONTRA"></small>
         </div>
@@ -63,6 +79,10 @@
         <div class="CONTRASEÑA-REG">
             <label for="final-new-password">Confirmar contraseña:</label>
             <input type="password" id="final-new-password" name="nueva-contraseña" placeholder="Mín. 8 carácteres. e.g., laudatoSi#10" maxlength="16" required>
+            <div class="cont-mostrar-contra">
+                <img src="eye.svg" alt="ver contraseña" id="mostrar/ocultar2" class="boton-ojo" onclick="alternarPassword2()">
+                <span id="muestraContra2" class="mensj-mostrar-contra">Mostrar contraseña</span>
+            </div>
             <small id="ERROR-FNEWP" class="MENSAJE-ERROR"></small>
             <small class="RESULTADO-NUEVA-CONTRA" id="RESULT-NEW-CONTRA"></small>
         </div>
