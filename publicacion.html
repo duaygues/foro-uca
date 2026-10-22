@@ -15,13 +15,30 @@
             UCA Foro
         </div>
 
-        <nav>
+        <!--HEADER USUARIOS NO REGISTRADOS-->
+        <nav id="USERS-NO-REGISTRADOS">
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
             <a href="publicar.html">Publicar</a>
             <a href="login.html">Iniciar sesión</a>
             <a href="registro.html" class="boton-registro">Registrarse</a>
         </nav>
+
+        <!--HEADER USUARIOS SI REGISTRADOS-->
+        <nav id="USERS-SI-REGISTRADOS" style="display: none;">
+            <div class="navPerfil2">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="publicar.html">Publicar</a>
+            </div>
+
+            <div class="navFotoPerfil">
+                <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+                <a href="perfil2.html" id="nombre-usuario-link">Nombre del Usuario</a>
+                <button id="boton-cerrar-sesion" class="BOTONCERRAR">Cerrar Sesión</button>
+            </div>
+        </nav>
+
 
     </header>
 
@@ -34,22 +51,25 @@
                 <p class="titulos">TÍTULO DE LA PUBLICACIÓN A VER</p>
             </div>
             <div class="CUERPO">
-                <p>CUERPO DE LA PUBLICACIÓN. Lorem ipsum dolor, sit amet consectetur
+                <p>Cuerpo de la publicación. Lorem ipsum dolor, sit amet consectetur
                     adipisicing elit. Corporis sapiente, quae eos a enim esse eius
                     tempora ipsam ab maiores. Accusamus delectus reiciendis soluta, 
-                    voluptatem temporibus tenetur earum assumenda eaque.</p>
+                    voluptatem temporibus tenetur earum assumenda eaque. </p>
             </div>
             <div class="REACCIONES">
-                <button title="Me gusta">👍 <span class="cont">0</span></button>
-                <button title="Me encanta">❤️ <span class="cont">0</span></button>
+                <button id="megusta" title="Me gusta" onclick="meGusta()" >👍 <span class="cont">0</span></button>
+                <button id="meencanta" title="Me encanta" onclick="meEncanta()">❤️ <span class="cont">0</span></button>
                 <button title="Guardar en favoritos">⭐</button>
             </div>
         </div>
 
         <aside class="COMENTARIOS">
-            <p class="titulos">Comentarios (0)</p>
-            <div class="CUERPO2">
-                <p>No hay comentarios.¡Sé el primero en comentar!</p>
+            <p id="contadorComentarios" class="titulos">Comentarios (0)</p>
+            <div id="cuerpoComentarios" class="CUERPO2">
+                <p id="mensajeVacio">No hay comentarios.¡Sé el primero en comentar!</p>
+            </div>
+            <div id="contenedorBotonComentar">
+                <a href="" onclick="mostrarFormulario(); return false;" class="comentar">Comentar</a>
             </div>
             
         </aside>
@@ -64,6 +84,7 @@
     </footer>
 
     <script src="Javascript/publicacion.js"></script>
+    <script src="Javascript/sesionusuario.js"></script>
 
 </body>
 </html>
