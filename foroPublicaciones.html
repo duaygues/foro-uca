@@ -15,12 +15,28 @@
             UCA Foro
         </div>
 
-        <nav>
+        <<!--HEADER USUARIOS NO REGISTRADOS-->
+        <nav id="USERS-NO-REGISTRADOS">
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
             <a href="publicar.html">Publicar</a>
             <a href="login.html">Iniciar sesión</a>
             <a href="registro.html" class="boton-registro">Registrarse</a>
+        </nav>
+
+        <!--HEADER USUARIOS SI REGISTRADOS-->
+        <nav id="USERS-SI-REGISTRADOS" style="display: none;">
+            <div class="navPerfil2">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="publicar.html">Publicar</a>
+            </div>
+
+            <div class="navFotoPerfil">
+                <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+                <a href="perfil2.html" id="nombre-usuario-link">Nombre del Usuario</a>
+                <button id="boton-cerrar-sesion" class="BOTONCERRAR">Cerrar Sesión</button>
+            </div>
         </nav>
 
     </header>
@@ -104,6 +120,8 @@
         <p>UCA Foro - Comunidad de estudiantes UCA</p>
 
     </footer>
+
+    <script src="Javascript/sesionusuario.js"></script>
 
 </body>
 </html>
