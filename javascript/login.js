@@ -1,14 +1,13 @@
 
 // JAVASCRIPT DEL LOGIN 
-
 const formLogin = document.querySelector("#FORM-LOGIN");
-const usuario = document.querySelector("#user");
+const usuario = document.getElementById("user");
 const errorUsu = document.querySelector("#ERROR-USER");
 const contraseña = document.querySelector("#password");
 const errorContra = document.querySelector("#ERROR-PASSWORD");
 const errorTodo = document.querySelector("#ERROR-GENERAL");
 
-const PATRÓN_EMAIL = /[a-zA-Z0-9]+@(uca)\.(edu)\.(ar)/;
+const PATRÓN_EMAIL = /^[a-zA-Z0-9]+@(uca)\.(edu)\.(ar)$/;
 const RESULT_EMAIL = document.querySelector("#RESULT-EMAIL");
 
 const PATRON_CONTRASEÑA = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.,*&#$%/()=+-])[a-zA-Z0-9.,*&#$%/()=+-]+/;
@@ -59,13 +58,17 @@ function validarFormulario(evento) {
 
 	const usuarioValido = validarUsuario();
 	const contraseñaValida = validarContraseña();
+   
 
-	if (usuarioValido && contraseñaValida) {
+    if (usuarioValido && contraseñaValida) {
         errorTodo.textContent = ""
-        localStorage.setItem("usuarioLogueado", usuario.value);
+        //sessionStorage.setItem("usuarioLogueado", usuario.value);
+        //sessionStorage.setItem("ingreso", "true"); 
+        //window.location.href = "index.html"; 
 
 	} else {
         evento.preventDefault();
+        //sessionStorage.setItem("ingreso", "false"); 
         errorTodo.textContent = "Revisar los campos marcados antes de continuar.";
 	}
 }
@@ -74,7 +77,6 @@ function eventosLogin() {
     usuario.addEventListener("input", validarUsuario);
     contraseña.addEventListener("input", validarContraseña);
     formLogin.addEventListener("submit", validarFormulario);
-
 }
 
 eventosLogin();
