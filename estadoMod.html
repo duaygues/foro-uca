@@ -1,60 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Publicación</title>
+    <title>Vista de Moderación - UCA Foro</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="Javascript/estadoMod.js"></script>
+        
 </head>
-
 <body>
+
+    <!-- ENCABEZADO UNIFICADO -->
     <header>
+        <div class="logo">UCA Foro</div>
 
-        <div class="logo">
-            UCA Foro
-        </div>
-
-         <nav>
+        <!--HEADER USUARIOS NO REGISTRADOS-->
+        <nav id="USERS-NO-REGISTRADOS">
             <a href="index.html">Inicio</a>
             <a href="carreras.html">Carreras</a>
             <a href="publicar.html">Publicar</a>
-            <img src="Def_per.png" alt="foto de perfil" class="fotoperfil_2">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html" class="boton-registro">Registrarse</a>
         </nav>
 
+        <!--HEADER USUARIOS SI REGISTRADOS-->
+        <nav id="USERS-SI-REGISTRADOS" style="display: none;">
+            <div class="navPerfil2">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="publicar.html">Publicar</a>
+            </div>
+
+            <div class="navFotoPerfil">
+                <img class="fotoPerfil" src="Def_per.png" alt="Foto de Perfil">
+                <a href="perfil2.html" id="nombre-usuario-link">Nombre del Usuario</a>
+                <button id="boton-cerrar-sesion" class="BOTONCERRAR">Cerrar Sesión</button>
+            </div>
+        </nav>
     </header>
-    <div class="livestatus">
-        <div class= "container">
-        
-            <h1>Estado de la publicacion</h1>
+
+
+    <main class="contenedor-moderacion">
+
+        <h1>Vista de Moderación</h1>
+
+        <div class="panel-control">
+            <label for="select-publicaciones">Seleccionar publicación pendiente de revisión:</label>
+            <select id="select-publicaciones" class="select-publicacion" onchange="cambiarPublicacion(this.value)">
+                <option>Título de Publicación 1</option>
+                <option>Título de Publicación 2</option>
+                <option>Título de Publicación 3</option>
+            </select>
         </div>
-        <section class= "stats">
-                <div class = "Est_title">
-                <h3>Estado de la publicacion:</h3>
+
+        <article class="tarjeta-publicacion">
+            <div class="encabezado-publicacion">
+                <div class="info-user">
+                    <span class="user-publica" id="username-publi">Nombre del Usuario</span>
+                    <span class="fechaPubli" id="fecha-pub">• Hace 20 minutos</span>
                 </div>
-                <select name="publicaciones previas" id="publicaciones previas">
-                    <option value="publicacion0">selecionar publicación</option>
-                    <option value="publicacion1">Publicación 1</option>
-                    <option value="publicacion2">Publicación 2</option>
+                <span id="estado" class="estado-revision">En revisión</span>
+            </div>
 
-                </select>
+            <div class="cuerpo-publicacion">
+                <h3 id="titulo-pub">Título de Publicación</h3>
+                <p id="texto-pub">Cuerpo de la publicación a revisar.</p>
+            </div>
 
-                <div class = "Estado">
+            <div class="acciones-moderacion">
+                <button class="boton-aprobar" onclick="actualizarEstado('Aprobada')">Aprobar</button>
+                <button class="boton-espera" onclick="actualizarEstado('En espera')">En espera</button>
+                <button class="boton-denegar" onclick="actualizarEstado('Denegada')">Denegar</button>
+            </div>
+        </article>
 
-                 <output id ="estado">En revisión</output>
-                </div>
-                <div class = "Est_botton">
-                <button id="denegar" onclick="Denegar_stat()">Denegar</button>
-                <button id="en_espera" onclick="En_espera()">En espera</button>
-                <button id="aprobar" onclick="Aprobar_stat()">aprobar</button>
-                </div>
-                 
+    </main>
 
-        
+    <script src="Javascript/estadoMod.js"></script>
+    <script src="Javascript/sesionusuario.js"></script>
 
-        </section>
-
-    </div>
 </body>
-
 </html>
