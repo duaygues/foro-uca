@@ -34,80 +34,57 @@ function meEncanta() {
     }
 }
 
-// FIN DE BOTONES DE ME GUSTA Y GUARDAR EN FAVORITOS
+// FUNCIÓN PARA COMENTAR
+function mostrarTexto() {
+    var cuadroComentar = document.getElementById("cuadroTexto");
 
-
-
-// Función para mostrar el cuadro de texto cuando hacen clic en "Comentar"
-function mostrarFormulario() {
-    var contenedorBoton = document.getElementById("contenedorBotonComentar");
-    
-    // Evita que se abra el formulario varias veces si ya está abierto
-    if (document.getElementById("formComentario")) {
-        return;
+    if (cuadroComentar.style.display === "none" || cuadroComentar.style.display === "") {
+        cuadroComentar.style.display = "block";
+    } else {
+        cuadroComentar.style.display = "none";
     }
-
-    // Creamos un contenedor temporal para el formulario de comentario
-    var divForm = document.createElement("div");
-    divForm.id = "formComentario";
-    divForm.style.marginTop = "10px";
-
-    // Creamos el cuadro de texto (textarea)
-    var textarea = document.createElement("textarea");
-    textarea.id = "textoComentario";
-    textarea.placeholder = "Escribí tu comentario...";
-    textarea.rows = "3";
-    textarea.style.width = "100%";
-
-    // Creamos el botón de enviar
-    var botonEnviar = document.createElement("button");
-    botonEnviar.textContent = "Enviar";
-    botonEnviar.onclick = enviarComentario; // Vinculamos el evento clic
-
-    // Agregamos los elementos creados al formulario
-    divForm.appendChild(textarea);
-    divForm.appendChild(document.createElement("br"));
-    divForm.appendChild(botonEnviar);
-    
-    // Insertamos el formulario debajo del enlace de comentar
-    contenedorBoton.appendChild(divForm);
 }
+// FUNCIÓN PARA Q EL COMENTARIO SE PUBLIQUE
 
-// Función para procesar y enviar el comentario a la parte superior
-function enviarComentario() {
-    var textarea = document.getElementById("textoComentario");
-    var textoIngresado = textarea.value.trim();
+var contadorComentarios = 0;
 
-    if (textoIngresado === "") {
-        alert("Por favor, escribí un comentario antes de enviar.");
-        return;
+function publicarComentario() {
+    var futuroComentario = document.getElementById("futuroComentario");
+    var comentario = futuroComentario.value;
+
+    const comentarioInvalido = document.getElementById("comentarioInvalido");
+
+    var contenedorLista = document.getElementById("listaComentarios");
+
+
+    if (comentario.trim() === "") {
+        comentarioInvalido.textContent = "El comentario no puede quedar vacío.";
+    } else {
+        comentarioInvalido.textContent = "";
+        var mensajeVacio = document.getElementById("mensajeSinComentarios");
+        if (mensajeVacio) {
+            mensajeVacio.style.display = "none";
+        }
+
+        var nombreUsuario = sessionStorage.getItem("nuevoUsuarioLogueado");
+
+        const nuevoComentario = document.createElement("div");
+        nuevoComentario.className = "comentario";
+        nuevoComentario.innerText = comentario;
+
+        const usuario = document.createElement("span");
+        usuario.className = "comentario-usuario";
+        usuario.innerText = nombreUsuario;
+
+        contenedorLista.prepend(nuevoComentario);
+        contenedorLista.prepend(usuario);
+
+
+        contadorComentarios = contadorComentarios + 1;
+        var cantComent = document.getElementById("contadorComentarios");
+        cantComent.innerText = contadorComentarios;
+
+        futuroComentario.value = "";
+        document.getElementById("cuadroTexto").style.display = "none";
     }
-
-    var cuerpoComentarios = document.getElementById("cuerpoComentarios");
-    var mensajeVacio = document.getElementById("mensajeVacio");
-
-    if (mensajeVacio) {
-        mensajeVacio.remove();
-    }
-
-    var nuevoComentario = document.createElement("div");
-    nuevoComentario.style.borderBottom = "1px solid #ddd";
-    nuevoComentario.style.padding = "8px 0";
-    nuevoComentario.style.marginBottom = "8px";
-
-    var parrafo = document.createElement("p");
-    parrafo.textContent = textoIngresado;
-    nuevoComentario.appendChild(parrafo);
-
-    cuerpoComentarios.insertBefore(nuevoComentario, cuerpoComentarios.firstChild);
-
-    var contador = document.getElementById("contadorComentarios");
-    var textoContador = contador.textContent; // Ej: "Comentarios (0)"
-    
-    var numeroActual = parseInt(textoContador.replace("Comentarios (", "").replace(")", ""));
-    
-    contador.textContent = "Comentarios (" + (numeroActual + 1) + ")";
-
-    var formComentario = document.getElementById("formComentario");
-    formComentario.remove();
 }
