@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,35 +45,46 @@
 
     <!--VER PUBLICACIÓN-->
 
-    <main class="CONTAINER">
-
-        <div class="VER-PUBLIC">
-            <div>
-                <p class="titulos">TÍTULO DE LA PUBLICACIÓN A VER</p>
+    <main>
+        <div class="VER-PUBLICACION">
+            <div class="box TITULO-PUBLICACION">
+                TITULO DE LA PUBLICACIÓN A VER
             </div>
-            <div class="CUERPO">
-                <p>Cuerpo de la publicación. Lorem ipsum dolor, sit amet consectetur
+
+            <div class="box CANT-COMENTARIOS">
+                <p>Comentarios (<span id="contadorComentarios">0</span>)</p>
+            </div>
+
+            <div class="box CUERPO-PUBLICACION">
+                Cuerpo de la publicación. Lorem ipsum dolor, sit amet consectetur
                     adipisicing elit. Corporis sapiente, quae eos a enim esse eius
                     tempora ipsam ab maiores. Accusamus delectus reiciendis soluta, 
-                    voluptatem temporibus tenetur earum assumenda eaque. </p>
+                    voluptatem temporibus tenetur earum assumenda eaque.
             </div>
-            <div class="REACCIONES">
-                <button id="megusta" title="Me gusta" onclick="meGusta()" >👍 <span class="cont">0</span></button>
+
+            <div class="box COMENTARIOS-PUBLICADOS">
+                <p id="mensajeSinComentarios">No hay comentarios.¡Sé el primero en comentar!</p>
+                <div id="listaComentarios"></div>
+            </div>
+
+            <div class="box Reacciones">
                 <button id="meencanta" title="Me encanta" onclick="meEncanta()">❤️ <span class="cont">0</span></button>
-                <button title="Guardar en favoritos">⭐</button>
+                <button id="megusta" title="Me gusta" onclick="meGusta()" title="Guardar en favoritos">⭐<span class="cont">0</span></button>
+            </div>
+
+            <div class="box COMENTAR">
+                <button class="publicarCom" onclick="mostrarTexto()">Comentar</button>
+
+                <div id="cuadroTexto" class="COMENTARIO-A-PUBLICAR" style="display: none;">
+                    <textarea name="" id="futuroComentario" placeholder="Escribí tu comentario..."></textarea>
+                    <small id="comentarioInvalido"></small>
+                    <button onclick="publicarComentario()">Publicar</button>
+                </div>
+
             </div>
         </div>
 
-        <aside class="COMENTARIOS">
-            <p id="contadorComentarios" class="titulos">Comentarios (0)</p>
-            <div id="cuerpoComentarios" class="CUERPO2">
-                <p id="mensajeVacio">No hay comentarios.¡Sé el primero en comentar!</p>
-            </div>
-            <div id="contenedorBotonComentar">
-                <a href="" onclick="mostrarFormulario(); return false;" class="comentar">Comentar</a>
-            </div>
-            
-        </aside>
+        
 
     </main>
 
