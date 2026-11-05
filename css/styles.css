@@ -1184,62 +1184,15 @@ input {
 
 /* INICIO DE ESTILOS DE LA MODERACIÓN */
 
-.contenedor-moderacion {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.panel-control {
-    background-color: #ffffff;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.panel-control label {
-    font-weight: 600;
-    color: #003b71;
-    font-size: 15px;
-}
-
-.select-publicacion {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #fff;
-    outline: none;
-    cursor: pointer;
-}
-
-.select-publicacion:focus {
-    border-color: #003b71;
-}
-
-/* TARJETA DE REVISIÓN DE PUBLICACIÓN */
-.tarjeta-publicacion {
-    background-color: #ffffff;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
-}
-
-.encabezado-publicacion {
+.ENCABEZADO-PUBLICACION {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
-    margin-bottom: 15px;
+    margin: 15px;
 }
+
 
 .info-user {
     display: flex;
@@ -1250,11 +1203,6 @@ input {
 .user-publica {
     font-weight: 600;
     color: #333;
-}
-
-.fechaPubli {
-    font-size: 13px;
-    color: #777;
 }
 
 .estado-revision {
@@ -1284,24 +1232,25 @@ input {
     font-size: medium;
 }
 
-.cuerpo-publicacion h3 {
+.CUERPOPUBLICACION h3 {
     font-size: 18px;
     color: #003b71;
-    margin-bottom: 10px;
+    margin: 15px;
 }
 
-.cuerpo-publicacion p {
+.CUERPOPUBLICACION p {
     font-size: 15px;
     color: #444;
-    margin-bottom: 20px;
+    margin: 15px;
 }
 
-/* BOTONES DE ACCIÓN DE MODERACIÓN */
+
 .acciones-moderacion {
     display: flex;
     gap: 12px;
     border-top: 1px solid #eee;
     padding-top: 18px;
+    margin: 10px;
 }
 
 .btn-accion {
@@ -1348,6 +1297,7 @@ input {
 .boton-denegar:hover {
     background-color: #c82333;
 }
+
 
 /* FIN DE ESTILOS DE LA MODERACIÓN */
 
