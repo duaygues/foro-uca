@@ -42,38 +42,48 @@
     <main class="contenedor-moderacion">
 
         <h1>Vista de Moderación</h1>
-
-        <div class="panel-control">
-            <label for="select-publicaciones">Seleccionar publicación pendiente de revisión:</label>
-            <select id="select-publicaciones" class="select-publicacion" onchange="cambiarPublicacion(this.value)">
-                <option>Título de Publicación 1</option>
-                <option>Título de Publicación 2</option>
-                <option>Título de Publicación 3</option>
-            </select>
+        
+        <div class="seccion">
+            <h2 id="">Publicaciones a moderar <span class="cont">(0)</span> </h2>
+            <div class="cuerpo">
+                <h3>No tenés más publicaciones a moderar.</h3>
+            </div>
         </div>
 
-        <article class="tarjeta-publicacion">
-            <div class="encabezado-publicacion">
-                <div class="info-user">
-                    <span class="user-publica" id="username-publi">Nombre del Usuario</span>
-                    <span class="fechaPubli" id="fecha-pub">• Hace 20 minutos</span>
+        <!--BOCETO DE LA PUBLICACION A MODERAR
+        <div class="seccion">
+            <h2 id="">Publicaciones a moderar <span class="cont">(0)</span> </h2>
+
+            <div>
+                <div class="ENCABEZADO-PUBLICACION">
+                    <div class="info-user">
+                        <span class="user-publica" id="username-publi">Nombre del Usuario</span>
+                    </div>
+                    <span id="estado" class="estado-revision">En revisión</span>
                 </div>
-                <span id="estado" class="estado-revision">En revisión</span>
-            </div>
 
-            <div class="cuerpo-publicacion">
-                <h3 id="titulo-pub">Título de Publicación</h3>
-                <p id="texto-pub">Cuerpo de la publicación a revisar.</p>
-            </div>
+                <div class="CUERPOPUBLICACION">
+                    <h3 id="titulo-pub">Título de Publicación</h3>
+                    <p id="texto-pub">Cuerpo de la publicación a revisar.</p>
+                </div>
 
-            <div class="acciones-moderacion">
-                <button class="boton-aprobar" onclick="actualizarEstado('Aprobada')">Aprobar</button>
-                <button class="boton-espera" onclick="actualizarEstado('En espera')">En espera</button>
-                <button class="boton-denegar" onclick="actualizarEstado('Denegada')">Denegar</button>
-            </div>
-        </article>
+                <div class="acciones-moderacion">
+                        <button class="boton-aprobar" onclick="actualizarEstado('Aprobada')">Aprobar</button>
+                        <button class="boton-espera" onclick="actualizarEstado('En espera')">En espera</button>
+                        <button class="boton-denegar" onclick="actualizarEstado('Denegada')">Denegar</button>
+                </div>
+            </div>-->
+
+
 
     </main>
+
+    <!-- PIE -->
+    <footer>
+
+        <p>UCA Foro - Comunidad de estudiantes UCA</p>
+
+    </footer>
 
     <script src="Javascript/estadoMod.js"></script>
     <script src="Javascript/sesionusuario.js"></script>
