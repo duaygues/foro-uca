@@ -30,7 +30,7 @@ function validarCorreo() {
         newUser.classList.remove("invalido");
         newUser.classList.add("valido");
         errorUser.textContent = "";
-        RESULT_EMAIL.textContent = "Formato de email válido."
+        RESULT_EMAIL.textContent = "Formato de email válido.";
         esValido = true;
     } else {
         newUser.classList.add("invalido");
@@ -65,7 +65,7 @@ function validarNuevoUsuario() {
 function validarNuevaContraseña() {
 	const nuevaContraseñaLimpia = newPassw.value.trim();
     const nuevaContraValida = PATRON_CONTRASEÑA.test(nuevaContraseñaLimpia);
-    const longNuevaContra = nuevaContraseñaLimpia.length >= 8 && nuevaContraseñaLimpia.length <= 16;
+    const longNuevaContra = nuevaContraseñaLimpia.length >= 8 && nuevaContraseñaLimpia.length <= 20;
 	let esValido = false;
 
 	if (nuevaContraValida && longNuevaContra) {
@@ -77,7 +77,7 @@ function validarNuevaContraseña() {
 	} else {
 		newPassw.classList.add("invalido");
         newPassw.classList.remove("valido");
-		errorNewPassw.textContent = "Escriba entre 8-16 caracteres y use al menos una mayúscula, una minúscula, un número y un caracter especial (&, $, #, %, -).";
+		errorNewPassw.textContent = "Escriba entre 8-20 caracteres y use al menos una mayúscula, una minúscula, un número y un caracter especial (&, $, #, %, -).";
         RESULT_CONTRA.textContent = "";
 	}
 
@@ -141,6 +141,8 @@ function eventosRegistro() {
 }
 
 eventosRegistro();
+
+// FUNCIONES PARA MOSTRAR/OCULTAR CONTRASEÑA
 
 function alternarPassword() {
   var inputPassword = document.getElementById("new-password");
